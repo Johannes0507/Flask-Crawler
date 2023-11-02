@@ -1,0 +1,31 @@
+{% extends 'Basic_Template.html' %}
+
+
+{% block title %}
+Products
+{% endblock %}
+
+
+{% block css %}
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/Products.css') }}">
+
+{% endblock %}
+
+
+
+{% block maincontent %}
+	
+<div style="height: 50px;"></div>
+	{% for item in allGoods %}
+
+	<div class='newsarea'>
+	<a href="{{item[4]}}" target="_blank" "><img src="{{item[3]}}"></a>
+	<p>{{item[2]}}</p>
+	<p>NT:{{item[5]}}</p>
+
+	</div>
+
+	{% endfor %}
+
+{% endblock %}

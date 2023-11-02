@@ -1,0 +1,29 @@
+{% extends 'Basic_Template.html' %}
+
+
+{% block title %}
+Food
+{% endblock %}
+
+
+{% block css %}
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/Food.css') }}">
+
+{% endblock %}
+
+
+{% block maincontent %}
+
+	{% for item in allFood %}
+
+	<div class='newsarea'>
+	<a href="{{item[1]}}" target="_blank" "><img src="{{item[2]}}"></a>
+	<p>{{item[0]}}</p>
+	<p>DATES:{{item[3]}}</p>
+
+	</div>
+
+	{% endfor %}
+
+{% endblock %}

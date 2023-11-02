@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+	{% block css %}
+	{% endblock %}
+
+	{% block js %}
+	{% endblock %}
+
+</head>
+<body>
+
+<div id='banner'>
+</div>
+
+<div id='menu'>
+
+	<ul>
+		<li><a href="#">Tax</a></li>
+		<li><a href="/products">Product</a></li>
+		<li><a href="/food">Food</a></li>
+		<li><a href="/news">News</a></li>
+		<li><a href="#">Conrent us</a></li>
+	</ul>
+
+</div>
+
+<div id='content'>
+	
+{% block maincontent %}
+{% endblock %}
+
+</div>
+	
+<div id='footer'>
+</div>
+
+</body>
+</html>

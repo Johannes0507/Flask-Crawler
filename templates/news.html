@@ -1,0 +1,25 @@
+{% extends 'Basic_Template.html' %}
+
+
+{% block title %}News{% endblock %}
+
+	{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/news.css')}}">
+	{% endblock %}
+
+{% block maincontent %}
+
+<div style="height: 100px"></div>
+	{% for item in allNews %}
+
+	<div class="newsarea" >
+
+		<img src="{{item.photo_url}}">
+		<p><a href="{{item.link}}" target="_blank">{{item.title}}</a></p>
+
+	</div>
+
+	{% endfor %}
+
+{% endblock %}
+

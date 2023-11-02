@@ -1,0 +1,17 @@
+.newsarea {
+	width: 19%;
+	margin-left: 2em;
+	margin-right: 2em;
+	height:300px;
+	float: left;
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+
+.newsarea p{
+	margin: 10px;
+}
+
+.newsarea img{
+	width: 100%;
+}

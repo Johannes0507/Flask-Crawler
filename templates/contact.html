@@ -1,0 +1,59 @@
+{% extends 'Basic_Template.html' %}
+
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+
+{% block maincontent %}
+
+<div id="message">
+
+	<p>Contact Us</p>
+	<form class="contact_form" action="/addcontact" method="post">
+
+		<div class="from-group">
+
+			<label>Title</label>
+			<input type="text" class="form-control" name="title" required>
+
+		</div>
+
+		<div class="from-group">
+
+			<label>Name</label>
+			<input type="text" class="form-control" name="nickname" required>
+
+		</div>
+
+		<div class="from-group">
+			
+			<label>Email</label>
+			<input type="text" class="form-control" name="email" required>
+
+		</div>
+
+		<div class="from-group">
+
+			<label>Give me some advice</label>
+			<textarea class="form-control" rows="5" name="advice" required></textarea>
+
+		</div>
+
+		<div class="form-group">
+
+			<button type="submit" class="btn_sumit">Submit</button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{% endblock %}
+

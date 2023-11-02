@@ -1,0 +1,12 @@
+.newsarea {
+	width: 23%;
+	margin-left: 2em;
+	margin-right: 2em;
+	height: 300px;
+	float: left;
+	background-color: #94b8b8
+}
+
+.newsarea img{
+	width: 100%;
+}

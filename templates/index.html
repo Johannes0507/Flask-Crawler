@@ -1,0 +1,61 @@
+{% extends 'Basic_Template.html' %}
+
+
+{% block title %}
+HomePage
+{% endblock %}
+
+
+{% block maincontent %}
+
+<div style="height: 50px;"></div>
+
+<div id='leftarea'>
+
+	{% for item in allGoods %}
+
+	<div class="area_f">
+
+		<a href="{{item[4]}}"><img src="{{item[3]}}"></a>
+		<p>{{item[2]}}</p>
+
+	</div>
+
+	{% endfor %}
+
+</div>
+
+
+<div id="centerarea">
+
+	{% for item in allNews %}
+
+	<div class="newsarea">
+
+		<a href="{{item.link}}"><img src="{{item.photo_url}}"></a>
+		<p>{{item.title}}</p>
+
+	</div>
+
+	{% endfor %}
+
+</div>
+
+
+<div id="rightarea">
+
+	{% for item in allFood %}
+
+	<div class="area_r">
+
+		<a href="{{item[2]}}"><img src="{{item[1]}}"></a>
+		<p>{{item[0]}}</p>
+
+	</div>
+
+	{% endfor %}
+
+
+</div>
+
+{% endblock %}
